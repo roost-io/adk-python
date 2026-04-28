@@ -1,0 +1,71 @@
+{
+  "run_id": "5fd96621",
+  "started_at": "2026-04-28T11:50:06.723014Z",
+  "ended_at": "2026-04-28T11:50:08.903635Z",
+  "status": "failed",
+  "config": {
+    "repo": "/private/var/tmp/Roost/RoostGPT/unit-adk-python/1777376672/source/adk-python",
+    "out": "/private/var/tmp/Roost/RoostGPT/unit-adk-python/1777376672/source/adk-python",
+    "workers": 5,
+    "scenarios_from": "planner",
+    "provider": "env:AI_TYPE",
+    "model": "azure/gpt-4.1",
+    "jedi": true
+  },
+  "summary": {
+    "targets_total": 1,
+    "targets_passed": 0,
+    "targets_failed": 1,
+    "targets_partial": 0,
+    "targets_skipped": 0,
+    "scenarios_total": 0,
+    "scenarios_passed": 0,
+    "scenarios_failed": 0,
+    "coverage_weighted": null,
+    "llm_cost_usd": 0.0,
+    "llm_input_tokens": 0,
+    "llm_output_tokens": 0,
+    "llm_cache_read_input_tokens": 0,
+    "llm_cache_creation_input_tokens": 0,
+    "llm_api_calls": 0,
+    "elapsed_ms": 0
+  },
+  "targets": [
+    {
+      "target_symbol_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event",
+      "symbol_kind": "function",
+      "source_file": "src/google/adk/a2a/converters/event_converter.py",
+      "source_range": null,
+      "test_file": "",
+      "test_file_hash": "",
+      "test_status": "failed",
+      "iterations": 0,
+      "pivots": 0,
+      "scenarios": [],
+      "coverage_pct": null,
+      "writer_cost_usd": 0.0,
+      "writer_input_tokens": 0,
+      "writer_output_tokens": 0,
+      "writer_cache_read_input_tokens": 0,
+      "writer_cache_creation_input_tokens": 0,
+      "diagnostics": [
+        {
+          "severity": "error",
+          "code": "TASK_CRASHED",
+          "message": "AuthenticationError: litellm.AuthenticationError: AzureException AuthenticationError - Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.",
+          "symbol": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event"
+        }
+      ]
+    }
+  ],
+  "files_written": [],
+  "pr_ready": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "code": "TASK_CRASHED",
+      "message": "AuthenticationError: litellm.AuthenticationError: AzureException AuthenticationError - Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.\n97, in post\n  File \"openai/_base_client.py\", line 1070, in request\nopenai.AuthenticationError: Error code: 401 - {'error': {'code': '401', 'message': 'Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.'}}\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"litellm/main.py\", line 1752, in completion\n  File \"litellm/llms/azure/azure.py\", line 378, in completion\nlitellm.llms.azure.common_utils.AzureOpenAIError: Error code: 401 - {'error': {'code': '401', 'message': 'Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.'}}\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"roost_pytest/orchestrator.py\", line 360, in guarded\n  File \"roost_pytest/orchestrator.py\", line 215, in _one_target\n  File \"asyncio/threads.py\", line 25, in to_thread\n  File \"concurrent/futures/thread.py\", line 86, in run\n  File \"concurrent/futures/thread.py\", line 73, in run\n  File \"roost_pytest/planner/agent.py\", line 176, in run_planner\n  File \"roost_pytest/llm/client.py\", line 190, in complete\n  File \"litellm/utils.py\", line 1772, in wrapper\n  File \"litellm/utils.py\", line 1593, in wrapper\n  File \"litellm/main.py\", line 4420, in completion\n  File \"litellm/litellm_core_utils/exception_mapping_utils.py\", line 2456, in exception_type\n  File \"litellm/litellm_core_utils/exception_mapping_utils.py\", line 2232, in exception_type\nlitellm.exceptions.AuthenticationError: litellm.AuthenticationError: AzureException AuthenticationError - Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.\n",
+      "symbol": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event"
+    }
+  ]
+}
