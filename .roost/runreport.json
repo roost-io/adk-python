@@ -1,0 +1,99 @@
+{
+  "run_id": "c79ae765",
+  "started_at": "2026-04-29T05:39:55.359628Z",
+  "ended_at": "2026-04-29T05:44:29.636150Z",
+  "status": "failed",
+  "config": {
+    "repo": "/private/var/tmp/Roost/RoostGPT/unit-adk-python/1777441129/source/adk-python",
+    "out": "/private/var/tmp/Roost/RoostGPT/unit-adk-python/1777441129/source/adk-python",
+    "workers": 5,
+    "scenarios_from": "planner",
+    "provider": "env:AI_TYPE",
+    "model": "azure/gpt-4.1",
+    "jedi": true
+  },
+  "summary": {
+    "targets_total": 1,
+    "targets_passed": 0,
+    "targets_failed": 0,
+    "targets_partial": 1,
+    "targets_skipped": 0,
+    "scenarios_total": 3,
+    "scenarios_passed": 2,
+    "scenarios_failed": 1,
+    "coverage_weighted": null,
+    "llm_cost_usd": 0.9048,
+    "llm_input_tokens": 1464446,
+    "llm_output_tokens": 6477,
+    "llm_cache_read_input_tokens": 1383936,
+    "llm_cache_creation_input_tokens": 0,
+    "llm_api_calls": 53,
+    "elapsed_ms": 0
+  },
+  "targets": [
+    {
+      "target_symbol_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event",
+      "symbol_kind": "function",
+      "source_file": "src/google/adk/a2a/converters/event_converter.py",
+      "source_range": [
+        201,
+        265
+      ],
+      "test_file": "/private/var/tmp/Roost/RoostGPT/unit-adk-python/1777441129/source/adk-python/adk/a2a/converters/event_converter/test_convert_a2a_task_to_event.py",
+      "test_file_hash": "sha256:9583ab6a9a4f8f8f4a58ee212c459672fe0223504b7624f1b39022e7ed7336e2",
+      "test_status": "partial",
+      "iterations": 53,
+      "pivots": 0,
+      "scenarios": [
+        {
+          "scenario_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event#0",
+          "scenario_name": "happy_path_with_artifacts",
+          "passed": false,
+          "duration_ms": null,
+          "failure_reason": "failed: {\"reprcrash\": {\"path\": \"/private/var/tmp/Roost/RoostGPT/unit-adk-python/1777441129/source/adk-python/src/google/adk/a2a/converters/event_converter.py\", \"lineno\": 230, \"message\": \"pydantic_core._pydantic_core.ValidationError: 3 validation errors for Message\\nparts.0.TextPart\\n  Input should be a vali",
+          "stderr_excerpt": "/private/var/tmp/Roost/RoostGPT/unit-adk-python/1777441129/source/adk-python/src/google/adk/a2a/converters/event_converter.py:230: pydantic_core._pydantic_core.ValidationError: 3 validation errors for Message\nparts.0.TextPart\n  Input should be a valid dictionary or instance of TextPart [type=model_type, input_value=<test_convert_a2a_task_to...t object at 0x113d9af00>, input_type=FakeA2APart]\n    For further information visit https://errors.pydantic.dev/2.12/v/model_type\nparts.0.FilePart\n  Input should be a valid dictionary or instance of FilePart [type=model_type, input_value=<test_convert_a2a_task_to...t object at 0x113d9af00>, input_type=FakeA2APart]\n    For further information visit https://errors.pydantic.dev/2.12/v/model_type\nparts.0.DataPart\n  Input should be a valid dictionary or instance of DataPart [type=model_type, input_value=<test_convert_a2a_task_to...t object at 0x113d9af00>, input_type=FakeA2APart]\n    For further information visit https://errors.pydantic.dev/2.12/v/model_type\n{\"reprcrash\": {\"path\": \"/private/var/tmp/Roost/RoostGPT/unit-adk-python/1777441129/source/adk-python/src/google/adk/a2a/converters/event_converter.py\", \"lineno\": 230, \"message\": \"pydantic_core._pydantic_core.ValidationError: 3 validation errors for Message\\nparts.0.TextPart\\n  Input should be a valid dictionary or instance of TextPart [type=model_type, input_value=<test_convert_a2a_task_to...t object at 0x113d9af00>, input_type=FakeA2APart]\\n    For further information visit https://error"
+        },
+        {
+          "scenario_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event#1",
+          "scenario_name": "minimal_event_no_message",
+          "passed": true,
+          "duration_ms": null,
+          "failure_reason": null,
+          "stderr_excerpt": null
+        },
+        {
+          "scenario_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event#2",
+          "scenario_name": "error_on_none_task",
+          "passed": true,
+          "duration_ms": null,
+          "failure_reason": null,
+          "stderr_excerpt": null
+        }
+      ],
+      "coverage_pct": null,
+      "writer_cost_usd": 0.9048039999999999,
+      "writer_input_tokens": 1464446,
+      "writer_output_tokens": 6477,
+      "writer_cache_read_input_tokens": 1383936,
+      "writer_cache_creation_input_tokens": 0,
+      "diagnostics": []
+    }
+  ],
+  "files_written": [
+    {
+      "path": "adk/a2a/converters/event_converter/test_convert_a2a_task_to_event.py",
+      "hash": "sha256:9583ab6a9a4f8f8f4a58ee212c459672fe0223504b7624f1b39022e7ed7336e2",
+      "status": "created"
+    }
+  ],
+  "pr_ready": {
+    "branch_suggestion": "roost/python-tests-20260429-0544",
+    "commit_message": "roost-pytest: add 1 test file(s)",
+    "pr_title": "Auto-generated Python unit tests (1 file(s))",
+    "pr_body_markdown": "## Summary\n- 0 targets with fully green tests\n- 1 targets with partial coverage\n\n## Generated test files\n- `adk/a2a/converters/event_converter/test_convert_a2a_task_to_event.py`",
+    "changed_files": [
+      "adk/a2a/converters/event_converter/test_convert_a2a_task_to_event.py"
+    ]
+  },
+  "diagnostics": []
+}
