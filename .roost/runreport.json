@@ -1,0 +1,115 @@
+{
+  "run_id": "a19da768",
+  "started_at": "2026-04-29T04:46:52.523840Z",
+  "ended_at": "2026-04-29T04:53:01.404346Z",
+  "status": "failed",
+  "config": {
+    "repo": "/private/var/tmp/Roost/RoostGPT/unit-adk-python/1777437937/source/adk-python",
+    "out": "/private/var/tmp/Roost/RoostGPT/unit-adk-python/1777437937/source/adk-python",
+    "workers": 5,
+    "scenarios_from": "planner",
+    "provider": "env:AI_TYPE",
+    "model": "azure/gpt-4.1",
+    "jedi": true
+  },
+  "summary": {
+    "targets_total": 1,
+    "targets_passed": 0,
+    "targets_failed": 0,
+    "targets_partial": 1,
+    "targets_skipped": 0,
+    "scenarios_total": 5,
+    "scenarios_passed": 3,
+    "scenarios_failed": 2,
+    "coverage_weighted": null,
+    "llm_cost_usd": 1.3646,
+    "llm_input_tokens": 2165294,
+    "llm_output_tokens": 17975,
+    "llm_cache_read_input_tokens": 2073216,
+    "llm_cache_creation_input_tokens": 0,
+    "llm_api_calls": 71,
+    "elapsed_ms": 0
+  },
+  "targets": [
+    {
+      "target_symbol_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event",
+      "symbol_kind": "function",
+      "source_file": "src/google/adk/a2a/converters/event_converter.py",
+      "source_range": [
+        201,
+        265
+      ],
+      "test_file": "/private/var/tmp/Roost/RoostGPT/unit-adk-python/1777437937/source/adk-python/adk/a2a/converters/event_converter/test_convert_a2a_task_to_event.py",
+      "test_file_hash": "sha256:50bdffbc2dd5f1d294f674928c299b522b69b8a72f3df57e9ab8734e00b94e40",
+      "test_status": "partial",
+      "iterations": 71,
+      "pivots": 0,
+      "scenarios": [
+        {
+          "scenario_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event#0",
+          "scenario_name": "happy_path_task_with_artifacts",
+          "passed": false,
+          "duration_ms": null,
+          "failure_reason": "failed",
+          "stderr_excerpt": null
+        },
+        {
+          "scenario_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event#1",
+          "scenario_name": "minimal_event_no_message",
+          "passed": true,
+          "duration_ms": null,
+          "failure_reason": null,
+          "stderr_excerpt": null
+        },
+        {
+          "scenario_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event#2",
+          "scenario_name": "error_on_none_task",
+          "passed": true,
+          "duration_ms": null,
+          "failure_reason": null,
+          "stderr_excerpt": null
+        },
+        {
+          "scenario_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event#3",
+          "scenario_name": "runtime_error_on_message_conversion_failure",
+          "passed": false,
+          "duration_ms": null,
+          "failure_reason": "failed",
+          "stderr_excerpt": null
+        },
+        {
+          "scenario_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event#4",
+          "scenario_name": "invocation_context_branch_and_id_propagation",
+          "passed": true,
+          "duration_ms": null,
+          "failure_reason": null,
+          "stderr_excerpt": null
+        }
+      ],
+      "coverage_pct": null,
+      "writer_cost_usd": 1.3645639999999999,
+      "writer_input_tokens": 2165294,
+      "writer_output_tokens": 17975,
+      "writer_cache_read_input_tokens": 2073216,
+      "writer_cache_creation_input_tokens": 0,
+      "diagnostics": []
+    }
+  ],
+  "files_written": [
+    {
+      "path": "adk/a2a/converters/event_converter/test_convert_a2a_task_to_event.py",
+      "hash": "sha256:50bdffbc2dd5f1d294f674928c299b522b69b8a72f3df57e9ab8734e00b94e40",
+      "status": "created"
+    }
+  ],
+  "pr_ready": {
+    "branch_suggestion": "roost/python-tests-20260429-0453",
+    "commit_message": "roost-pytest: add 1 test file(s)",
+    "pr_title": "Auto-generated Python unit tests (1 file(s))",
+    "pr_body_markdown": "## Summary\n- 0 targets with fully green tests\n- 1 targets with partial coverage\n\n## Generated test files\n- `adk/a2a/converters/event_converter/test_convert_a2a_task_to_event.py`",
+    "changed_files": [
+      "adk/a2a/converters/event_converter/test_convert_a2a_task_to_event.py"
+    ]
+  },
+  "diagnostics": []
+}
