@@ -1,0 +1,131 @@
+{
+  "run_id": "9133e0e9",
+  "started_at": "2026-04-29T05:46:20.901176Z",
+  "ended_at": "2026-04-29T05:48:25.658533Z",
+  "status": "ok",
+  "config": {
+    "repo": "/private/var/tmp/Roost/RoostGPT/unit-adk-python/1777441516/source/adk-python",
+    "out": "/private/var/tmp/Roost/RoostGPT/unit-adk-python/1777441516/source/adk-python",
+    "workers": 5,
+    "scenarios_from": "planner",
+    "provider": "env:AI_TYPE",
+    "model": "gemini/gemini-3-flash-preview",
+    "jedi": true
+  },
+  "summary": {
+    "targets_total": 1,
+    "targets_passed": 1,
+    "targets_failed": 0,
+    "targets_partial": 0,
+    "targets_skipped": 0,
+    "scenarios_total": 7,
+    "scenarios_passed": 7,
+    "scenarios_failed": 0,
+    "coverage_weighted": null,
+    "llm_cost_usd": 0.1452,
+    "llm_input_tokens": 541206,
+    "llm_output_tokens": 12324,
+    "llm_cache_read_input_tokens": 360814,
+    "llm_cache_creation_input_tokens": 0,
+    "llm_api_calls": 19,
+    "elapsed_ms": 0
+  },
+  "targets": [
+    {
+      "target_symbol_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event",
+      "symbol_kind": "function",
+      "source_file": "src/google/adk/a2a/converters/event_converter.py",
+      "source_range": [
+        201,
+        265
+      ],
+      "test_file": "/private/var/tmp/Roost/RoostGPT/unit-adk-python/1777441516/source/adk-python/adk/a2a/converters/event_converter/test_convert_a2a_task_to_event.py",
+      "test_file_hash": "sha256:46cc961cb6ad23a88ebbd58e126a82963a00fb97267044dc6507ed8377a93c60",
+      "test_status": "passed",
+      "iterations": 19,
+      "pivots": 0,
+      "scenarios": [
+        {
+          "scenario_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event#0",
+          "scenario_name": "happy_path_with_artifacts",
+          "passed": true,
+          "duration_ms": null,
+          "failure_reason": null,
+          "stderr_excerpt": null
+        },
+        {
+          "scenario_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event#1",
+          "scenario_name": "happy_path_with_status_message",
+          "passed": true,
+          "duration_ms": null,
+          "failure_reason": null,
+          "stderr_excerpt": null
+        },
+        {
+          "scenario_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event#2",
+          "scenario_name": "happy_path_with_history",
+          "passed": true,
+          "duration_ms": null,
+          "failure_reason": null,
+          "stderr_excerpt": null
+        },
+        {
+          "scenario_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event#3",
+          "scenario_name": "happy_path_minimal_event",
+          "passed": true,
+          "duration_ms": null,
+          "failure_reason": null,
+          "stderr_excerpt": null
+        },
+        {
+          "scenario_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event#4",
+          "scenario_name": "edge_case_with_invocation_context",
+          "passed": true,
+          "duration_ms": null,
+          "failure_reason": null,
+          "stderr_excerpt": null
+        },
+        {
+          "scenario_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event#5",
+          "scenario_name": "error_path_none_task",
+          "passed": true,
+          "duration_ms": null,
+          "failure_reason": null,
+          "stderr_excerpt": null
+        },
+        {
+          "scenario_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event#6",
+          "scenario_name": "error_path_conversion_failure",
+          "passed": true,
+          "duration_ms": null,
+          "failure_reason": null,
+          "stderr_excerpt": null
+        }
+      ],
+      "coverage_pct": null,
+      "writer_cost_usd": 0.14520869999999997,
+      "writer_input_tokens": 541206,
+      "writer_output_tokens": 12324,
+      "writer_cache_read_input_tokens": 360814,
+      "writer_cache_creation_input_tokens": 0,
+      "diagnostics": []
+    }
+  ],
+  "files_written": [
+    {
+      "path": "adk/a2a/converters/event_converter/test_convert_a2a_task_to_event.py",
+      "hash": "sha256:46cc961cb6ad23a88ebbd58e126a82963a00fb97267044dc6507ed8377a93c60",
+      "status": "created"
+    }
+  ],
+  "pr_ready": {
+    "branch_suggestion": "roost/python-tests-20260429-0548",
+    "commit_message": "roost-pytest: add 1 test file(s)",
+    "pr_title": "Auto-generated Python unit tests (1 file(s))",
+    "pr_body_markdown": "## Summary\n- 1 targets with fully green tests\n\n## Generated test files\n- `adk/a2a/converters/event_converter/test_convert_a2a_task_to_event.py`",
+    "changed_files": [
+      "adk/a2a/converters/event_converter/test_convert_a2a_task_to_event.py"
+    ]
+  },
+  "diagnostics": []
+}
