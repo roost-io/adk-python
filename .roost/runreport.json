@@ -1,0 +1,75 @@
+{
+  "run_id": "18a1d39e",
+  "started_at": "2026-06-29T06:23:35.498228Z",
+  "ended_at": "2026-06-29T06:23:35.615006Z",
+  "status": "failed",
+  "config": {
+    "repo": "/var/tmp/Roost/RoostGPT/june-python-adk/bf844718-6761-47d4-8df8-3c2830f11356/source/adk-python",
+    "out": "/var/tmp/Roost/RoostGPT/june-python-adk/bf844718-6761-47d4-8df8-3c2830f11356/source/adk-python",
+    "workers": 5,
+    "scenarios_from": "planner",
+    "provider": "env:AI_TYPE",
+    "model": "bedrock/global.anthropic.claude-sonnet-4-6",
+    "jedi": true
+  },
+  "summary": {
+    "targets_total": 1,
+    "targets_passed": 0,
+    "targets_failed": 1,
+    "targets_partial": 0,
+    "targets_skipped": 0,
+    "scenarios_total": 0,
+    "scenarios_passed": 0,
+    "scenarios_failed": 0,
+    "scenarios_xfailed": 0,
+    "scenarios_xpassed": 0,
+    "scenarios_skipped": 0,
+    "scenarios_errored": 0,
+    "coverage_weighted": null,
+    "llm_cost_usd": 0.0,
+    "llm_input_tokens": 0,
+    "llm_output_tokens": 0,
+    "llm_cache_read_input_tokens": 0,
+    "llm_cache_creation_input_tokens": 0,
+    "llm_api_calls": 0,
+    "elapsed_ms": 0
+  },
+  "targets": [
+    {
+      "target_symbol_id": "src.google.adk.a2a.converters.request_converter.convert_a2a_request_to_agent_run_request",
+      "symbol_kind": "function",
+      "source_file": "src/google/adk/a2a/converters/request_converter.py",
+      "source_range": null,
+      "test_file": "",
+      "test_file_hash": "",
+      "test_status": "failed",
+      "iterations": 0,
+      "pivots": 0,
+      "scenarios": [],
+      "coverage_pct": null,
+      "writer_cost_usd": 0.0,
+      "writer_input_tokens": 0,
+      "writer_output_tokens": 0,
+      "writer_cache_read_input_tokens": 0,
+      "writer_cache_creation_input_tokens": 0,
+      "diagnostics": [
+        {
+          "severity": "error",
+          "code": "TASK_CRASHED",
+          "message": "Exception: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "symbol": "src.google.adk.a2a.converters.request_converter.convert_a2a_request_to_agent_run_request"
+        }
+      ]
+    }
+  ],
+  "files_written": [],
+  "pr_ready": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "code": "TASK_CRASHED",
+      "message": "Exception: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'\n_auth_with_access_key_and_secret_key\nModuleNotFoundError: No module named 'boto3'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"litellm/utils.py\", line 1596, in wrapper\n  File \"litellm/main.py\", line 4502, in completion\n  File \"litellm/litellm_core_utils/exception_mapping_utils.py\", line 2466, in exception_type\n  File \"litellm/litellm_core_utils/exception_mapping_utils.py\", line 2441, in exception_type\nlitellm.exceptions.APIConnectionError: litellm.APIConnectionError: No module named 'boto3'\nTraceback (most recent call last):\n  File \"litellm/main.py\", line 3893, in completion\n  File \"litellm/llms/bedrock/chat/converse_handler.py\", line 339, in completion\n  File \"litellm/llms/bedrock/base_aws_llm.py\", line 351, in get_credentials\n  File \"litellm/llms/bedrock/base_aws_llm.py\", line 141, in _get_or_set_cached_credentials\n  File \"litellm/llms/bedrock/base_aws_llm.py\", line 353, in <lambda>\n  File \"litellm/llms/bedrock/base_aws_llm.py\", line 1193, in _auth_with_access_key_and_secret_key\nModuleNotFoundError: No module named 'boto3'\n\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"litellm/main.py\", line 4516, in completion_with_retries\nModuleNotFoundError: No module named 'tenacity'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"roost_pytest/orchestrator.py\", line 558, in guarded\n  File \"roost_pytest/orchestrator.py\", line 244, in _one_target\n  File \"asyncio/threads.py\", line 25, in to_thread\n  File \"concurrent/futures/thread.py\", line 59, in run\n  File \"roost_pytest/planner/agent.py\", line 186, in run_planner\n  File \"roost_pytest/llm/client.py\", line 272, in complete\n  File \"litellm/utils.py\", line 1720, in wrapper\n  File \"litellm/main.py\", line 4518, in completion_with_retries\nException: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'\n",
+      "symbol": "src.google.adk.a2a.converters.request_converter.convert_a2a_request_to_agent_run_request"
+    }
+  ]
+}
