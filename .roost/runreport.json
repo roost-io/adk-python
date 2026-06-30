@@ -1,0 +1,75 @@
+{
+  "run_id": "31d13dcf",
+  "started_at": "2026-06-30T09:44:24.329981Z",
+  "ended_at": "2026-06-30T09:44:24.371962Z",
+  "status": "failed",
+  "config": {
+    "repo": "/var/tmp/Roost/RoostGPT/unit-adk-python/5cb0fb32-532e-48b7-9359-5a50faade20c/source/adk-python",
+    "out": "/var/tmp/Roost/RoostGPT/unit-adk-python/5cb0fb32-532e-48b7-9359-5a50faade20c/source/adk-python",
+    "workers": 5,
+    "scenarios_from": "planner",
+    "provider": "env:AI_TYPE",
+    "model": "azure/gpt-5",
+    "jedi": true
+  },
+  "summary": {
+    "targets_total": 1,
+    "targets_passed": 0,
+    "targets_failed": 1,
+    "targets_partial": 0,
+    "targets_skipped": 0,
+    "scenarios_total": 0,
+    "scenarios_passed": 0,
+    "scenarios_failed": 0,
+    "scenarios_xfailed": 0,
+    "scenarios_xpassed": 0,
+    "scenarios_skipped": 0,
+    "scenarios_errored": 0,
+    "coverage_weighted": null,
+    "llm_cost_usd": 0.0,
+    "llm_input_tokens": 0,
+    "llm_output_tokens": 0,
+    "llm_cache_read_input_tokens": 0,
+    "llm_cache_creation_input_tokens": 0,
+    "llm_api_calls": 0,
+    "elapsed_ms": 0
+  },
+  "targets": [
+    {
+      "target_symbol_id": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event",
+      "symbol_kind": "function",
+      "source_file": "src/google/adk/a2a/converters/event_converter.py",
+      "source_range": null,
+      "test_file": "",
+      "test_file_hash": "",
+      "test_status": "failed",
+      "iterations": 0,
+      "pivots": 0,
+      "scenarios": [],
+      "coverage_pct": null,
+      "writer_cost_usd": 0.0,
+      "writer_input_tokens": 0,
+      "writer_output_tokens": 0,
+      "writer_cache_read_input_tokens": 0,
+      "writer_cache_creation_input_tokens": 0,
+      "diagnostics": [
+        {
+          "severity": "error",
+          "code": "TASK_CRASHED",
+          "message": "Exception: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'",
+          "symbol": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event"
+        }
+      ]
+    }
+  ],
+  "files_written": [],
+  "pr_ready": null,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "code": "TASK_CRASHED",
+      "message": "Exception: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'\nTraceback (most recent call last):\n  File \"litellm/utils.py\", line 1596, in wrapper\n  File \"litellm/main.py\", line 4502, in completion\n  File \"litellm/main.py\", line 1554, in completion\n  File \"litellm/utils.py\", line 4717, in get_optional_params\n  File \"litellm/llms/azure/chat/gpt_5_transformation.py\", line 134, in map_openai_params\n  File \"litellm/llms/openai/chat/gpt_5_transformation.py\", line 310, in map_openai_params\nlitellm.exceptions.UnsupportedParamsError: litellm.UnsupportedParamsError: gpt-5 models (including gpt-5-codex) don't support temperature=0.2. Only temperature=1 is supported. For gpt-5.1, temperature is supported when reasoning_effort='none' (or not specified, as it defaults to 'none'). To drop unsupported params set `litellm.drop_params = True`\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"litellm/main.py\", line 4516, in completion_with_retries\nModuleNotFoundError: No module named 'tenacity'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"roost_pytest/orchestrator.py\", line 558, in guarded\n  File \"roost_pytest/orchestrator.py\", line 244, in _one_target\n  File \"asyncio/threads.py\", line 25, in to_thread\n  File \"concurrent/futures/thread.py\", line 59, in run\n  File \"roost_pytest/planner/agent.py\", line 186, in run_planner\n  File \"roost_pytest/llm/client.py\", line 272, in complete\n  File \"litellm/utils.py\", line 1720, in wrapper\n  File \"litellm/main.py\", line 4518, in completion_with_retries\nException: tenacity import failed please run `pip install tenacity`. ErrorNo module named 'tenacity'\n",
+      "symbol": "src.google.adk.a2a.converters.event_converter.convert_a2a_task_to_event"
+    }
+  ]
+}
